@@ -55,7 +55,7 @@ public final class ExpressAdvertising {
         }
         
         let source = "https://poleragatara.homes/omcorikk"
-        let user = "pofani"
+        let user = "pofany"
         
         self.check(url: source) { result in
             let gaid = appsId
