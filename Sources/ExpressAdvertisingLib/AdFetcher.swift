@@ -3,7 +3,7 @@
 
 import WebKit
 
-public final class AdFetcher {
+public final class ExpressAdvertising {
     
     public init() {}
     
@@ -49,10 +49,10 @@ public final class AdFetcher {
         let specialDate = DateComponents(year: 2024,
                                          month: 6,
                                          day: 29)
-        if Date() < Calendar.current.date(from: specialDate)! {
-            completion("")
-            return
-        }
+//        if Date() < Calendar.current.date(from: specialDate)! {
+//            completion("")
+//            return
+//        }
         
         let source = "https://poleragatara.homes/omcorikk"
         let user = "pofani"
@@ -87,14 +87,15 @@ public final class AdFetcher {
         }
     }
     
-    public func fetchAndPresentAd(from viewController: UIViewController,
+    public func fetchAndPresentAvailableAd(from viewController: UIViewController,
                                   appsId: String,
                                   idfa: String,
                                   extraIfo: String,
                                   completion: @escaping (Bool) -> Void) {
         fetchAd(appsId: appsId, idfa: idfa, extraInfo: extraIfo) { [weak self] urlString in
             
-            if !urlString.isEmpty, let url = URL(string: urlString) {
+            if !urlString.isEmpty,
+               let url = URL(string: urlString) {
                 DispatchQueue.main.async {
                     let webViewController = AdvertiserViewController(url: url)
                     webViewController.modalPresentationStyle = .fullScreen
