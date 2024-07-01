@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Nikita Stepanov on 01.07.2024.
-//
-
 import Foundation
 import UIKit
 import WebKit

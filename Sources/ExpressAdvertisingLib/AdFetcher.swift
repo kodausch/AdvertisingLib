@@ -63,7 +63,6 @@ public final class ExpressAdvertising {
             switch result {
             case .success(let data):
                 let responseString = String(data: data, encoding: .utf8) ?? ""
-                print(responseString)
                 if responseString.contains(user) {
                     if extraInfo != "" {
                         let link = "\(responseString)?idfa=\(idfa)&gaid=\(gaid)\(extraInfo)"
